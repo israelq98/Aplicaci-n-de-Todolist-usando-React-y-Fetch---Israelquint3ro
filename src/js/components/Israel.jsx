@@ -5,9 +5,7 @@ function Israel() {
     const [peticionesDatos, setPeticionesDatos] = useState([]);
     const [todoList,settodoList] = useState(false)
 
-    if(todoList){
-        return <TodoList/>
-    }
+
 
     const url_base = "https://playground.4geeks.com/todo"
 
@@ -15,6 +13,10 @@ function Israel() {
         GetUsers()
     }, [])
 
+ 
+ if (todoList) {
+    return <TodoList volver={() => settodoList(false)} />;
+  }
 
 
     // metodo GET
@@ -68,6 +70,7 @@ function Israel() {
     console.log(peticionesDatos)
 
     return (
+        
         <div className='israel text-center mt-5'>
             <h1>Todo List App</h1>
             <hr/>

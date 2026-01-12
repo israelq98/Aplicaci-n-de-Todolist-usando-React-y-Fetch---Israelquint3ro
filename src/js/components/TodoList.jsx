@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect} from 'react'
 
-function TodoList() {
+function TodoList({volver}) {
 const [nuevaTarea, setNuevaTarea] = useState("")
 	const [tareas, setTareas] = useState([
 		{id: 1,texto: "Do laundry"},
@@ -35,7 +35,14 @@ const [nuevaTarea, setNuevaTarea] = useState("")
 
 
 			<h1 className="text-center mt-5"> Israel To-Do List</h1>
+			<h2>Agregar o editar tareas disponibles</h2>
+
 			<div className="papelContainer">
+			
+		
+			<button className="button-30 mb-3 mx-auto" role="button" onClick={volver}>Volver a mi usuario</button>
+		
+
 			
 				<input className="textoInput" type="text" placeholder="What needs to be done?" value={nuevaTarea} onChange={(e) => setNuevaTarea(e.target.value)} onKeyDown={handleKeyDown} />
 				
