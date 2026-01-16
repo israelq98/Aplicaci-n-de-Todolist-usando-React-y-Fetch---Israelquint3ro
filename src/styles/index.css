@@ -99,7 +99,7 @@ h2{
 
 }
 
-.button-30 {
+.button-30,.modificarUsuario {
   align-items: center;
   appearance: none;
   background-color: #FCFCFD;
@@ -110,9 +110,9 @@ h2{
   color: #36395A;
   cursor: pointer;
   display: inline-flex;
-  font-family: "JetBrains Mono",monospace;
-  height: 48px;
-  justify-content: center;
+  height: 35px;
+  font-family: "Permanent Marker", cursive;
+justify-content: center;
   line-height: 1;
   list-style: none;
   overflow: hidden;
@@ -128,13 +128,14 @@ h2{
   white-space: nowrap;
   will-change: box-shadow,transform;
   font-size: 18px;
+  
 }
 
 .button-30:focus {
   box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
 }
 
-.button-30:hover {
+.button-30:hover,.modificarUsuario:hover {
   box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
   transform: translateY(-2px);
 }
@@ -142,4 +143,14 @@ h2{
 .button-30:active {
   box-shadow: #D6D6E7 0 3px 7px inset;
   transform: translateY(2px);
+}
+
+
+.modificarUsuario{
+    width: 45%;
+}
+
+hr{
+    margin-left: 10px;
+    margin-right: 10px;
 }

@@ -11,7 +11,8 @@ const Home = () => {
 		<div className="text-center">
 			
 		
-             <Israel/> 
+      
+			 <Israel/>
 			
 
 		</div>
