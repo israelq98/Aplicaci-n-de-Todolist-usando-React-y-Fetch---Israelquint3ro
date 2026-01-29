@@ -1,9 +1,8 @@
 import React from "react";
-import Israel from "./Israel";
-import TodoList from "./TodoList";
+ import Israel from "./Israel";
+// import TodoList from "./TodoList";
+import UpdateTask from "./UpdateTask";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
 const Home = () => {
@@ -12,7 +11,8 @@ const Home = () => {
 			
 		
       
-			 <Israel/>
+			 <Israel/> 
+			 {/* <UpdateTask/> */}
 			
 
 		</div>

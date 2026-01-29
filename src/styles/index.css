@@ -66,14 +66,14 @@ li {
 }
 
 .btn {
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.1s;
     font-size: x-large;
 
 }
 
 .btn:hover {
-    opacity: 1;
+    opacity:1 ;
 }
 
 #usuario{

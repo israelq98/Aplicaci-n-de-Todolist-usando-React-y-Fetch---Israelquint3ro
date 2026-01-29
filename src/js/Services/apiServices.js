@@ -22,40 +22,50 @@ export const getTasks = async () => {
 
 
     }
-    const data = response.json()
+    const data = await  response.json()
 
-    return data.todos
+    return data.todos || []
 }
 
 
 //Petición creando el usuario
-export const postTask = async (newtask) => {
-    await fetch(`${base_url}/todos/${user}`,
+export const postTask = async (id) => {
+    const response = await fetch(`${base_url}/todos/${user}`,
         {
             method: 'POST',
-            hearders: {
+            headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(newtask)
+            body: JSON.stringify({
+                label:id,
+                is_done:false
+            })
+        
         }
     )
-
+            const data = await response.json()
+            return data
 }
 
-export const EraseTask = async (taskid) => {
-    await fetch(`${base_url}/todos/${taskid}`, {
+export const eraseTask = async (taskid) => {
+    const response = await fetch(`${base_url}/todos/${taskid}`, {
         method: 'DELETE'
     }
     )
+     return response
 }
 
-export const updateTask = async (taskid, updatedtask) => {
+export const updateTask = async (taskid, updatetask) => {
     await fetch(`${base_url}/todos/${taskid}`, {
         method: 'PUT',
-        hearders: {
+        headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(newtask)
+        body: JSON.stringify(updatetask)
 
     })
+    return response.json()
 }
+
+
+console.log(updateTask)
